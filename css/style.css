@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../images/slider/a.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 70px;
+    height: 70px;
+    border-radius:35px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2PX;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s; 
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    color: #fff;
+    font-size: 18px;
+    padding: 4px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+/* @MEDIA */
+@media(max-width:700px){
+    .nav-links ul li, #wrapper{
+        display: block;
+    }
+    .nav-links{
+        width: 150px;
+        right: -150px;
+        background-color: #f44336;
+        top: 0;
+        min-height: 100vh;
+        text-align: left;
+        position: absolute;
+        z-index: 2;
+    }
+    .text-box h1{
+        font-size: 20px;
+    }
+    .text-box p{
+        font-size: 16px;
+        padding: 4px;
+    }
+    .hero-btn{
+        padding: 8px 20px;
+    
+    }
+}
+
+/* Dashboard */
+body{
+    background-color: hsla(210, 8%, 95%, 0.493);
+}
+#wrapper{
+    width: 84%;
+    margin: auto;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+.box-3, .stock-box, .col{
+    background-color: white;
+    margin: 1%;
+    float: left;
+
+}
+.col{
+    width: 20%;
+}
+.stock-box{
+    width: 45%;
+}
+.box-3{
+    width: 30%;
+}
+.box-3 img, .sImg{
+    width: 100%;
+    cursor: pointer;
+}
+.sImg{
+    float: left;
+    width: 100px;
+}
+
+.box-3 img{
+    height: 250px;
+}
+.desc{
+    float: right;
+    text-align:left;
+}
+#search{
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+#search input{
+    border: 1px solid #f44336;
+    border-radius: 10px ;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+}
+#explore{
+    color: #f44336;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+#copy{
+    color: #f44336;
+    margin: 0%;
+    padding: 2%;
+    text-align: center;
+    background-color: rgb(252, 233, 233);
+
+}
+
+/*  Admin page*/
+.main-content{
+    width: 80%;
+    margin: auto;
+}
+.btn-admin, #cpassword{
+    background-color: blue;
+    padding: 1%;
+    color: white; 
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.btn-admin{
+    font-weight: bold;
+}
+.btn-admin:hover, #cpassword:hover{
+    background-color: indigo;
+}
+.tbl-full{
+    width: 100%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+table tr td{
+    padding: 1%;
+}
+
+#update{
+    background-color: rgb(73, 128, 0);
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+#update:hover{
+    background-color: darkgreen;
+}
+#delete{
+    background-color: lightcoral;
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+#delete:hover{
+    background-color: darkred;
+}
+.tbl-30{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+.add-admin{
+    padding-top: 2%;
+    text-align: center;
+    color: #f44336;
+}
+.success{
+    color: green;
+}
+.error{
+    color: red;
+}
+#container h2{
+    text-align: center;
+    color: #f44336;
+}
+/*...admin End */
+
+/*SLIDER*/
+
+@keyframes slidy {
+    0% {left: 0%;}
+    20% {left: 0%;}
+    25% {left: -100%;}
+    45% {left: -100%;}
+    50% {left: -200%;}
+    70% {left: -200%;}
+    75% {left: -300%;}
+    95% {left: -300%;}
+    100% {left: -400%;}
+}
+body{margin: 0;}
+div#slider {overflow: hidden;}
+div#slider figure img{
+    width: 20%;
+    float: left;
+    height: 100vh;
+}
+div#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}
+/*SLIDER*/
+
+/* Sigin*/
+
+#login{
+    width: 50%;
+    margin: auto;
+    background-color: greenyellow;
+    text-align: center;
+}
+
+#sign{
+    text-align: center;
+    padding: 5px;
+    color: blue;
+}
+.element{
+    margin: 5px;
+}
+button{
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
+}
+input, .select1{
+    border: 2px solid green;
+    border-radius: 4px;
+    padding: 5px;
+    width: 80%;
+}
+p{
+    color: magenta;
+    padding: 8px;
+    margin: 10px;
+}
+p a{
+    color: blue;
+}
+#container, #cont{
+    background-color: rgb(0, 238, 255);
+    margin: auto;
+    text-align: center;
+    box-shadow: 12px 1px 2px 1px rgba(17, 17, 20, 0.2);
+}
+.session{
+    text-align: center;
+}
+#centre{
+    text-align: left;
+    width: 50%;
+    margin: auto;
+}
+#centre table{
+    width: 100%;
+}
+#txtA{
+    width: 80%;
+    padding: 1%;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+.txt-white{
+    color: #f44336;
+}
+.item{
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+.dscb{
+    float: right;
+    text-align: left;
+}
+
+#cont{
+    width: 50%;
+}
+#container fieldset{
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+.img{
+    text-align: left;
+}
